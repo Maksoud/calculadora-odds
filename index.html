@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Calculadora de ODDs - Surebet</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="#" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="div-title top-15 bottom-15">CALCULADORA DE ODDs - SUREBET</div>
+        <div class="divMainTable">
+            <div class="divMainTableBody bg-lightblue">
+                <div class="col-xs-6 divMainTableBody50-1">
+                    <div class="divMainTableRow">
+                        <div class="divMainTableCell" style="margin: -3px;">&nbsp;</div>
+                    </div>
+                    <div class="divMainTableRow">
+                        <div class="divMainTableCell">Total</div>
+                        <div class="divMainTableCell"><span class="symbol">$</span><input type="tel" class="valuemask" id="aposta" placeholder="0,00" value="100,00" autocomplete="off"></div>
+                    </div>
+                    <div class="divMainTableRow">
+                        <div class="divMainTableCell">ODD1</div>
+                        <div class="divMainTableCell"><input type="tel" class="valuemask" id="odd1" placeholder="0,00" autocomplete="off"></div>
+                    </div>
+                    <div class="divMainTableRow">
+                        <div class="divMainTableCell">ODD2</div>
+                        <div class="divMainTableCell"><input type="tel" class="valuemask" id="odd2" placeholder="0,00" autocomplete="off"></div>
+                    </div>
+                </div>
+                <div class="col-xs-6 divMainTableBody50-2 bg-blue">
+                    <div class="divMainTableRow result-text">
+                        <div class="divMainTableCell"><strong>Resultado</strong></div>
+                    </div>
+                    <div class="divMainTableRow">
+                        <div class="divMainTableCell pull-left">$ <span id="retorno">0,00</span></div>
+                        <div class="divMainTableCell percentualtotal"><span id="perctotal">0,00</span>%</div>
+                    </div>
+                    <div class="divMainTableRow">
+                        <div class="divMainTableCell"><span class="symbol">$</span><input type="tel" class="valuemask" id="valorodd1" placeholder="0,00" autocomplete="off"></div>
+                        <div class="divMainTableCell percentual">$ <span id="resultodd1">0,00</span></div>
+                    </div>
+                    <div class="divMainTableRow">
+                        <div class="divMainTableCell"><span class="symbol">$</span><input type="tel" class="valuemask" id="valorodd2" placeholder="0,00" autocomplete="off"></div>
+                        <div class="divMainTableCell percentual">$ <span id="resultodd2">0,00</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="font-size: 9px;margin: auto;width: 100%;text-align: center;">Maksoud Software® - 2020</div>
+
+        <div class="buttons">
+            <button type="submit" class="btn btn-primary">Calcular</button>
+            <button type="cancel" class="btn btn-default">Limpar</button>
+        </div>
+
+        <div class="instrucoes text-justify">
+            <label class="bottom-4" style="margin-bottom: 4px;font-size: 16px;"><strong>Dicas de Uso:</strong></label>
+            <ul>
+                <li>
+                    Primeiro informe o valor total da aposta e as cotações da ODD1 e ODD2. A calculadora irá te retornar a proporção de cada ODD e o resultado de desse cálculo.
+                </li>
+                <li>
+                    No caso da alteração do valor da proporção das ODDs, preencha os campos da direita e um novo cálculo será realizado na outra proporção e no total da aposta.
+                </li>
+                <li>
+                    Use a tabela de progressão como referência para identificar possibilidades de lucro. Note que a ODD1 precisa ser menor que a ODD2 para que haja lucro.
+                </li>
+            </ul>
+        </div>
+
+        <div class="div-title bottom-15">Tabela de progressão de ODDs</div>
+        <div class="tabela-progressao">
+            <div class="divProgressaoTable">
+                <div class="divProgressaoTableBody">
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableHead">ODD1</div>
+                        <div class="divProgressaoTableHead">ODD2</div>
+                        <div class="divProgressaoTableHead"><strong>Resultado</strong></div>
+                        <div class="divProgressaoTableHead division">|</div>
+                        <div class="divProgressaoTableHead">ODD1</div>
+                        <div class="divProgressaoTableHead">ODD2</div>
+                        <div class="divProgressaoTableHead">Resultado</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,05</div>
+                        <div class="divProgressaoTableCell">21,00</div>
+                        <div class="divProgressaoTableCell">0,00</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,00</div>
+                        <div class="divProgressaoTableCell">2,00</div>
+                        <div class="divProgressaoTableCell">0,00</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,10</div>
+                        <div class="divProgressaoTableCell">11,00</div>
+                        <div class="divProgressaoTableCell">0,00</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,05</div>
+                        <div class="divProgressaoTableCell">1,96</div>
+                        <div class="divProgressaoTableCell">0,20</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,15</div>
+                        <div class="divProgressaoTableCell">7,70</div>
+                        <div class="divProgressaoTableCell">0,06</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,10</div>
+                        <div class="divProgressaoTableCell">1,91</div>
+                        <div class="divProgressaoTableCell">0,02</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,20</div>
+                        <div class="divProgressaoTableCell">6,00</div>
+                        <div class="divProgressaoTableCell">0,00</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,15</div>
+                        <div class="divProgressaoTableCell">1,87</div>
+                        <div class="divProgressaoTableCell">0,01</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,25</div>
+                        <div class="divProgressaoTableCell">5,00</div>
+                        <div class="divProgressaoTableCell">0,00</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,20</div>
+                        <div class="divProgressaoTableCell">1,84</div>
+                        <div class="divProgressaoTableCell">0,20</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,30</div>
+                        <div class="divProgressaoTableCell">4,34</div>
+                        <div class="divProgressaoTableCell">0,04</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,25</div>
+                        <div class="divProgressaoTableCell">1,80</div>
+                        <div class="divProgressaoTableCell">0,00</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,35</div>
+                        <div class="divProgressaoTableCell">3,86</div>
+                        <div class="divProgressaoTableCell">0,02</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,30</div>
+                        <div class="divProgressaoTableCell">1,77</div>
+                        <div class="divProgressaoTableCell">0,02</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,40</div>
+                        <div class="divProgressaoTableCell">3,50</div>
+                        <div class="divProgressaoTableCell">0,00</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,35</div>
+                        <div class="divProgressaoTableCell">1,75</div>
+                        <div class="divProgressaoTableCell">0,30</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,45</div>
+                        <div class="divProgressaoTableCell">3,23</div>
+                        <div class="divProgressaoTableCell">0,07</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,40</div>
+                        <div class="divProgressaoTableCell">1,72</div>
+                        <div class="divProgressaoTableCell">0,19</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,50</div>
+                        <div class="divProgressaoTableCell">3,00</div>
+                        <div class="divProgressaoTableCell">0,00</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,45</div>
+                        <div class="divProgressaoTableCell">1,69</div>
+                        <div class="divProgressaoTableCell">0,01</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,55</div>
+                        <div class="divProgressaoTableCell">2,82</div>
+                        <div class="divProgressaoTableCell">0,02</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,50</div>
+                        <div class="divProgressaoTableCell">1,67</div>
+                        <div class="divProgressaoTableCell">0,12</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,60</div>
+                        <div class="divProgressaoTableCell">2,67</div>
+                        <div class="divProgressaoTableCell">0,05</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,55</div>
+                        <div class="divProgressaoTableCell">1,65</div>
+                        <div class="divProgressaoTableCell">0,18</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,65</div>
+                        <div class="divProgressaoTableCell">2,54</div>
+                        <div class="divProgressaoTableCell">0,02</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,60</div>
+                        <div class="divProgressaoTableCell">1,63</div>
+                        <div class="divProgressaoTableCell">0,19</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,70</div>
+                        <div class="divProgressaoTableCell">2,43</div>
+                        <div class="divProgressaoTableCell">0,02</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,65</div>
+                        <div class="divProgressaoTableCell">1,61</div>
+                        <div class="divProgressaoTableCell">0,15</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,75</div>
+                        <div class="divProgressaoTableCell">2,34</div>
+                        <div class="divProgressaoTableCell">0,12</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,70</div>
+                        <div class="divProgressaoTableCell">1,59</div>
+                        <div class="divProgressaoTableCell">0,07</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,80</div>
+                        <div class="divProgressaoTableCell">2,25</div>
+                        <div class="divProgressaoTableCell">0,00</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,75</div>
+                        <div class="divProgressaoTableCell">1,58</div>
+                        <div class="divProgressaoTableCell">0,35</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,85</div>
+                        <div class="divProgressaoTableCell">2,18</div>
+                        <div class="divProgressaoTableCell">0,07</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,80</div>
+                        <div class="divProgressaoTableCell">1,56</div>
+                        <div class="divProgressaoTableCell">0,18</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,90</div>
+                        <div class="divProgressaoTableCell">2,12</div>
+                        <div class="divProgressaoTableCell">0,20</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,85</div>
+                        <div class="divProgressaoTableCell">1,55</div>
+                        <div class="divProgressaoTableCell">0,40</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">1,95</div>
+                        <div class="divProgressaoTableCell">2,06</div>
+                        <div class="divProgressaoTableCell">0,17</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">2,90</div>
+                        <div class="divProgressaoTableCell">1,53</div>
+                        <div class="divProgressaoTableCell">0,16</div>
+                    </div>
+                    <div class="divProgressaoTableRow">
+                        <div class="divProgressaoTableCell">2,00</div>
+                        <div class="divProgressaoTableCell">2,00</div>
+                        <div class="divProgressaoTableCell">0,00</div>
+                        <div class="divProgressaoTableCell division">|</div>
+                        <div class="divProgressaoTableCell">3,00</div>
+                        <div class="divProgressaoTableCell">1,50</div>
+                        <div class="divProgressaoTableCell">0,00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="copyright">Maksoud Software® - 2020</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.pt-BR.min.js" integrity="sha512-mVkLPLQVfOWLRlC2ZJuyX5+0XrTlbW2cyAwyqgPkLGxhoaHNSWesYMlcUjX8X+k45YB8q90s88O7sos86636NQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous"></script>
+        <script src="jquery.maskMoney.min.js"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html>

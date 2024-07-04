@@ -1,0 +1,218 @@
+body {
+    font-family: 'Roboto', serif;
+    color: #27b;
+    font-size: 18px;
+    overflow: visible;
+}
+:link {
+    text-decoration: none;
+}
+.bottom-15 {
+    margin-bottom: 15px !important;
+}
+.top-15 {
+    margin-top: 15px !important;
+}
+
+/* Botões */
+
+.btn {
+    font-size: 18px;
+}
+div.buttons {
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+div.buttons>button {
+    margin-right: 7px;
+}
+div.result-text {
+    width: 100%;
+    text-align: center !important;
+}
+
+/* Ajustes diversos */
+
+div.div-title {
+    font-weight: bold; 
+    margin-bottom: 5px;
+    font-size: 16px; 
+    margin: auto; 
+    text-align: center; 
+    width: 100%;
+}
+div.instrucoes {
+    background-color: #e6f5ff;
+    padding: 25px;
+    margin: 20px 0 20px -10px;
+    font-size: 14px;
+    line-height: 21px;
+}
+div.percentual {
+    font-size: 12px;
+    color: gray;
+    margin-left: 20px;
+}
+div.percentualtotal {
+    font-size: 14px;
+    color: gray;
+}
+th {
+    white-space: nowrap;
+}
+input {
+    border-radius: 5px;
+    border: 1px solid #27b;
+    width: 84px;
+    height: 32px;
+    padding-left: 12px;
+    padding-right: 3px;
+    font-size: 15px;
+    text-align: right;
+    padding-top: 2px;
+}
+div.bg-blue {
+    background-color: #ccebff;
+}
+div.bg-lightblue {
+    background-color: #f2f2f2;
+}
+span.symbol {
+    position: absolute;
+    margin: 4px 4px;
+    opacity: 0.7;
+}
+div.division {
+    font-size: 26px;
+    margin-bottom: -15px;
+    font-weight: normal;
+    float: left;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-top: -20px;
+    width: 10px;
+}
+div#copyright {
+    font-size: 9px;
+    margin: auto;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Tabela Principal */
+
+div.main-table {
+    border: 1px solid #337ab7; 
+    border-radius: 12px;
+    table-layout: fixed;
+    display: block;
+    max-width: 305px;
+    width: 100%;
+    margin: auto;
+    border-spacing: 10px;
+    padding: 10px;
+}
+div.divMainTable {
+    display: table;
+    max-width: 350px;
+    min-width: 316px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid #337ab7; 
+    border-radius: 12px;
+    font-weight: bold;
+    overflow: hidden;
+}
+div.divMainTableRow {
+    display: table-row;
+}
+div.divMainTableHeading {
+    display: table-header-group;
+}
+div.divMainTableBody50-1 {
+    padding: 10px;
+    text-align: left;
+    height: 175px;
+}
+div.divMainTableBody50-2 {
+    padding: 10px;
+    text-align: right;
+    height: 175px;
+}
+/* div.divMainTableBody50 {
+    display: inline-block;
+    vertical-align: bottom;
+    width: calc(50% - 20px);
+    padding: 10px;
+    text-align: right;
+} */
+div.divMainTableCell, .divMainTableHead {
+    display: inline-block;
+    width: calc(50% - 10px);
+    padding: 5px;
+    white-space: nowrap;
+    text-align: right;
+}
+div.divMainTableHeading {
+    display: table-header-group;
+    font-weight: bold;
+}
+div.divMainTableFoot {
+    display: table-footer-group;
+    font-weight: bold;
+}
+div.divMainTableBody {
+    display: table-row-group;
+}
+
+/* Tabela de Progressão */
+
+div.tabela-progressao {
+    overflow-x: scroll;
+    margin-bottom: 50px;
+    margin: auto;
+    width: 100%;
+    border-spacing: 5px;
+    text-align: center;
+}
+div.tabela-progressao th, td {
+    padding: 8px;
+}
+div.tabela-progressao .divProgressaoTableRow:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* divTable.com */
+.divProgressaoTable {
+    display: table;
+    max-width: 435px;
+    /* width: 100%; */
+    margin: auto;
+    border: 1px solid #337ab7; 
+    border-radius: 12px;
+    border-spacing: 0px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.divProgressaoTableRow {
+    display: table-row;
+}
+.divProgressaoTableHead {
+    background-color: #EEE;
+    display: table-header-group;
+    font-weight: bold;
+}
+.divProgressaoTableCell, .divProgressaoTableHead {
+    display: table-cell;
+    padding: 3px 10px;
+}
+.divProgressaoTableFoot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+}
+.divProgressaoTableBody {
+    display: table-row-group;
+}
